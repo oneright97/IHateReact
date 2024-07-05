@@ -9,7 +9,8 @@ const Todo = () => {
                 <h1 className="text-xl font-bold mb-4">하고 싶어요</h1>
                 <ul>
                     {todos.map((todo, index) => (
-                        <li key={index} className="flex items-center justify-between mb-2">
+                        <li key={index} className="flex items-center mb-4">
+                            <input type="checkbox" className="mr-2 custom-checkbox" />
                             <p>{todo}</p>
                         </li>
                     ))}

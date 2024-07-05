@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,4 +16,39 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* src/index.css */
+.custom-checkbox {
+  /* Hide default checkbox */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 1.5rem;  /* Increase width */
+  height: 1.5rem; /* Increase height */
+}
+
+.custom-checkbox:checked {
+  background-image: linear-gradient(to right, #6366f1, #22d3ee); /* Gradient background */
+  border-color: #6366f1;
+}
+
+.custom-checkbox:checked:after {
+  content: '✔';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem; /* Adjust checkmark size */
 }
