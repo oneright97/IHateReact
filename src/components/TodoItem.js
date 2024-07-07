@@ -18,7 +18,10 @@ const TodoItem = ({ todo }) => {
       ) : (
         <img src={todo.catImageUrl} alt="Random Cat" className="w-32 h-32" />
       )}
-      <button onClick={() => dispatch(removeTodo(todo.id))} className="ml-20 px-2 py-1 bg-red-500 text-white rounded hover:bg-red-700">
+      <button
+        onClick={() => dispatch(removeTodo(todo.id))}
+        className="ml-20 px-2 py-1 bg-red-500 text-white rounded hover:bg-red-700"
+      >
         안볼래
       </button>
     </li>
